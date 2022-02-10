@@ -3,18 +3,17 @@ import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement } from './counterSlice';
 
 const Counter = () => {
-  const count = useSelector((state) =>
-    state.counter.value
-  );
+  const count = useSelector((state) => state.counter.value);
   const dispatch = useDispatch();
   return (
     <div>
-      <button aria-label="increment value" onClick={() => dispatch(increment())}>
-        Increment
+    <h2 style={{color: "blue"}}>Counter App</h2>
+      <button style={{backgroundColor:"black", color:"white", height:40,width:60,fontSize:36, border:"none", borderRadius:12}} aria-label="increment value" onClick={() => dispatch(increment())}>
+        +
       </button>
-      <h1>{count}</h1>
-      <button aria-label="decrement value" onClick={() => dispatch(decrement())}>
-        decrement
+      <h1 style={{color:"#D2691E"}}>{count}</h1>
+      <button style={{backgroundColor:"black", color:"white", height:40,width:60,fontSize:36, border:"none", borderRadius:12}} aria-label="decrement value" onClick={() => dispatch(decrement())}>
+        -
       </button>
     </div>
   );
