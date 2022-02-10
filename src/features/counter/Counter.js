@@ -21,11 +21,3 @@ const Counter = () => {
 };
 
 export default Counter;
-
-// import React from 'react';
-// import {useSelector, useDispatch} from 'react-redux';
-
-// const Counter =()=>{
-//   <h1>hello</h1>
-// }
-// export default Counter;
