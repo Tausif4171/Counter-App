@@ -1,20 +1,20 @@
 import React from 'react';
-import {useSelector, useDispatch} from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { increment, decrement } from './counterSlice';
 
 const Counter = () => {
-  const count = useSelector((state)=>
+  const count = useSelector((state) =>
     state.counter.value
-    );
+  );
   const dispatch = useDispatch();
   return (
     <div>
-      <button 
-       aria-label="increment value" onClick={()=>dispatch(increment())}>
+      <button aria-label="increment value" onClick={() => dispatch(increment())}>
+        Increment
       </button>
       <h1>{count}</h1>
-      <button 
-       aria-label="decrement value" onClick={()=>dispatch(decrement())}>
+      <button aria-label="decrement value" onClick={() => dispatch(decrement())}>
+        decrement
       </button>
     </div>
   );
